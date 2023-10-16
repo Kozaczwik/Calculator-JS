@@ -52,8 +52,11 @@ function showResult() {
       break;
     case ':':
       result = b / a;
+      if (currentNumber.innerHTML === '0') {
+        return (previousNumber.innerHTML = 'Nie dziel przez');
+      }
       break;
-    case '2^':
+    case 'x^':
       result = b ** a;
       break;
   }
